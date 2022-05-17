@@ -1,5 +1,5 @@
 // String
-const name = 'ntnyq'
+const name = `ntnyq`
 
 // Number
 const age = 28
@@ -8,10 +8,10 @@ const age = 28
 const isMale = true
 
 // Symbol
-const symbol = Symbol('symbol')
+const symbol = Symbol(`symbol`)
 
 // Array
-const animals: string[] = ['cat', 'dog', 'tiger']
+const animals: string[] = [`cat`, `dog`, `tiger`]
 const grades: Array<number> = [95, 25, 30]
 
 // Enum
@@ -22,31 +22,27 @@ enum Direction {
   RIGHT,
 }
 enum GENDER {
-  MALE = 'male',
-  FEMALE = 'female',
+  MALE = `male`,
+  FEMALE = `female`,
 }
 
 // Any 可执行所有操作 可被赋值所有类型
-const any: any = 'hello world'
+const any: any = `hello world`
 
-const num1 = (<string>any).length
-const num2 = (any as string).length
+export const num1 = (<string>any).length
+export const num2 = (any as string).length
 
 // Unknown 可被赋值所有类型，但只能赋值给unknown或者any
 const unknown: unknown = 28
 
 // 类型别名
-type Dictionary<T> = { [key: string]: T }
+type Dictionary<T> = Record<string, T>
 
 // Tuple 元祖
-const config: [string, Dictionary<string | number>, string?] = [
-  'error',
-  {
-    ignore: '^foobar',
-    level: 2,
-  },
-  'test',
-]
+const config: [string, Dictionary<string | number>, string?] = [`error`, {
+  ignore: `^foobar`,
+  level: 2,
+}, `test`]
 
 // Void
 const unusable: void = undefined
@@ -57,7 +53,7 @@ const u = undefined
 
 type NumberGenerator = () => number
 
-function myFunc(numGenerator?: NumberGenerator): number {
+function myFunc (numGenerator?: NumberGenerator): number {
   return numGenerator?.() || 0
 }
 

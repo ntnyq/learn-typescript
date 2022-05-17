@@ -5,9 +5,9 @@
   "editor.insertSpaces": true,
   "editor.formatOnSave": true,
   "[javascript]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": false
   },
   "[typescript]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": false
   }
 }
