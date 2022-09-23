@@ -1,3 +1,5 @@
+// 字面量类型
+
 // String
 const name = `ntnyq`
 
@@ -26,11 +28,17 @@ enum GENDER {
   FEMALE = `female`,
 }
 
-// Any 可执行所有操作 可被赋值所有类型
+// Any 可执行所有操作 可被赋值所有类型 除了 never
 const any: any = `hello world`
 
 export const num1 = (<string>any).length
 export const num2 = (any as string).length
+
+function getFile (file: `${string}.jpg`) {
+  return file
+}
+
+getFile('a.jpg')
 
 // Unknown 可被赋值所有类型，但只能赋值给unknown或者any
 const unknown: unknown = 28
@@ -72,5 +80,6 @@ export {
   unusable,
   n,
   u,
+  getFile,
   myFunc,
 }
