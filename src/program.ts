@@ -20,8 +20,7 @@ export type res2 = IsTwo<2>
 
 // 推导 infer
 // 用于提取类型的一部分
-export type First<Tuple extends unknown[]> = Tuple extends [infer T, ...unknown[]]
-  ? T : never // 前面的 extends 是约束
+export type First<Tuple extends unknown[]> = Tuple extends [infer T, ...unknown[]] ? T : never // 前面的 extends 是约束
 
 export type FirstElement<Tuple extends unknown[]> = Tuple[0]
 

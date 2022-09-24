@@ -6,6 +6,7 @@
     "strict": true,
     "declaration": true,
     "noImplicitAny": false,
+    "strictBindCallApply": true,
     "lib": [
       "DOM",
       "ESNext"

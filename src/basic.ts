@@ -34,7 +34,7 @@ const any: any = `hello world`
 export const num1 = (<string>any).length
 export const num2 = (any as string).length
 
-function getFile (file: `${string}.jpg`) {
+function getFile(file: `${string}.jpg`) {
   return file
 }
 
@@ -47,10 +47,14 @@ const unknown: unknown = 28
 type Dictionary<T> = Record<string, T>
 
 // Tuple 元祖
-const config: [string, Dictionary<string | number>, string?] = [`error`, {
-  ignore: `^foobar`,
-  level: 2,
-}, `test`]
+const config: [string, Dictionary<string | number>, string?] = [
+  `error`,
+  {
+    ignore: `^foobar`,
+    level: 2,
+  },
+  `test`,
+]
 
 // Void
 const unusable: void = undefined
@@ -61,7 +65,7 @@ const u = undefined
 
 type NumberGenerator = () => number
 
-function myFunc (numGenerator?: NumberGenerator): number {
+function myFunc(numGenerator?: NumberGenerator): number {
   return numGenerator?.() || 0
 }
 
