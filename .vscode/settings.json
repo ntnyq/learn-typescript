@@ -1,8 +1,7 @@
 {
-  "files.eol": "\n",
-  "files.encoding": "utf8",
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
   "editor.formatOnSave": true,
-  "eslint.enable": false
+  "eslint.enable": false,
+  "cSpell.words": [
+    "pnpm"
+  ]
 }
