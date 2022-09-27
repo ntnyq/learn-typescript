@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
-    "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "strict": true,
     "declaration": true,
-    "noImplicitAny": false,
+    "removeComments": false,
     "strictBindCallApply": true,
     "lib": [
       "DOM",

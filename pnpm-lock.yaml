@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@ntnyq/prettier-config': ^1.0.4
+  '@type-challenges/utils': ^0.1.1
   husky: ^8.0.1
   lint-staged: ^13.0.3
   prettier: ^2.7.1
@@ -10,6 +11,7 @@ specifiers:
 
 devDependencies:
   '@ntnyq/prettier-config': 1.0.4
+  '@type-challenges/utils': 0.1.1
   husky: 8.0.1
   lint-staged: 13.0.3
   prettier: 2.7.1
@@ -20,6 +22,10 @@ packages:
 
   /@ntnyq/prettier-config/1.0.4:
     resolution: {integrity: sha512-8WOKFIU9WqB1j+WY8o/o53wygcXDO4x/0Ns5gbNrAjVYfxUVBRnYRGX4UP8tHSLa6NnmNAlFz39hfcKXD5o+6w==}
+    dev: true
+
+  /@type-challenges/utils/0.1.1:
+    resolution: {integrity: sha512-A7ljYfBM+FLw+NDyuYvGBJiCEV9c0lPWEAdzfOAkb3JFqfLl0Iv/WhWMMARHiRKlmmiD1g8gz/507yVvHdQUYA==}
     dev: true
 
   /aggregate-error/3.1.0:
