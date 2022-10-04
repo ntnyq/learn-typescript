@@ -2,7 +2,7 @@
   "name": "learn-typescript",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@7.12.2",
+  "packageManager": "pnpm@7.13.1",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
