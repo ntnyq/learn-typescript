@@ -73,6 +73,10 @@ export function getPropValue<T extends Object, Key extends keyof T>(obj: T, key:
   return obj[key]
 }
 
+helloWorld(`hello world`)
+
+helloWorld2(`hello world`)
+
 export {
   name,
   age,

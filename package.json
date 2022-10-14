@@ -2,7 +2,7 @@
   "name": "learn-typescript",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@7.13.1",
+  "packageManager": "pnpm@7.13.4",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@ntnyq/prettier-config": "^1.0.4",
+    "@ntnyq/prettier-config": "^1.0.5",
     "@type-challenges/utils": "^0.1.1",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",

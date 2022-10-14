@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@ntnyq/prettier-config': ^1.0.4
+  '@ntnyq/prettier-config': ^1.0.5
   '@type-challenges/utils': ^0.1.1
   husky: ^8.0.1
   lint-staged: ^13.0.3
@@ -10,7 +10,7 @@ specifiers:
   typescript: ^4.8.4
 
 devDependencies:
-  '@ntnyq/prettier-config': 1.0.4
+  '@ntnyq/prettier-config': 1.0.5
   '@type-challenges/utils': 0.1.1
   husky: 8.0.1
   lint-staged: 13.0.3
@@ -20,8 +20,8 @@ devDependencies:
 
 packages:
 
-  /@ntnyq/prettier-config/1.0.4:
-    resolution: {integrity: sha512-8WOKFIU9WqB1j+WY8o/o53wygcXDO4x/0Ns5gbNrAjVYfxUVBRnYRGX4UP8tHSLa6NnmNAlFz39hfcKXD5o+6w==}
+  /@ntnyq/prettier-config/1.0.5:
+    resolution: {integrity: sha512-jjVA+ar08Au9CsRREVgEv+wjxAP+iEiwqaT1jUpvBUK/R+rrQh78aH3JxNVomgeaL80LEIuhLp7F8AG9Q6P0iQ==}
     dev: true
 
   /@type-challenges/utils/0.1.1:
@@ -131,8 +131,8 @@ packages:
     resolution: {integrity: sha512-3tlv/dIP7FWvj3BsbHrGLJ6l/oKh1O3TcgBqMn+yyCagOxc23fyzDS6HypQbgxWbkpDnf52p1LuR4eWDQ/K9WQ==}
     dev: true
 
-  /commander/9.4.0:
-    resolution: {integrity: sha512-sRPT+umqkz90UA8M1yqYfnHlZA7fF6nSphDtxeywPZ49ysjxDQybzk13CL+mXekDRG92skbcqCLVovuCusNmFw==}
+  /commander/9.4.1:
+    resolution: {integrity: sha512-5EEkTNyHNGFPD2H+c/dXXfQZYa/scCKasxWcXJaWnNJ99pnQN9Vnmqow+p+PlFPE63Q6mThaZws1T+HxfpgtPw==}
     engines: {node: ^12.20.0 || >=14}
     dev: true
 
@@ -278,7 +278,7 @@ packages:
     dependencies:
       cli-truncate: 3.1.0
       colorette: 2.0.19
-      commander: 9.4.0
+      commander: 9.4.1
       debug: 4.3.4
       execa: 6.1.0
       lilconfig: 2.0.5
@@ -288,7 +288,7 @@ packages:
       object-inspect: 1.12.2
       pidtree: 0.6.0
       string-argv: 0.3.1
-      yaml: 2.1.1
+      yaml: 2.1.3
     transitivePeerDependencies:
       - enquirer
       - supports-color
@@ -308,7 +308,7 @@ packages:
       log-update: 4.0.0
       p-map: 4.0.0
       rfdc: 1.3.0
-      rxjs: 7.5.6
+      rxjs: 7.5.7
       through: 2.3.8
       wrap-ansi: 7.0.0
     dev: true
@@ -449,8 +449,8 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rxjs/7.5.6:
-    resolution: {integrity: sha512-dnyv2/YsXhnm461G+R/Pe5bWP41Nm6LBXEYWI6eiFP4fiwx6WRI/CD0zbdVAudd9xwLEF2IDcKXLHit0FYjUzw==}
+  /rxjs/7.5.7:
+    resolution: {integrity: sha512-z9MzKh/UcOqB3i20H6rtrlaE/CgjLOvheWK/9ILrbhROGTweAi1BaFsTT9FbwZi5Trr1qNRs+MXkhmR06awzQA==}
     dependencies:
       tslib: 2.4.0
     dev: true
@@ -595,7 +595,7 @@ packages:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
     dev: true
 
-  /yaml/2.1.1:
-    resolution: {integrity: sha512-o96x3OPo8GjWeSLF+wOAbrPfhFOGY0W00GNaxCDv+9hkcDJEnev1yh8S7pgHF0ik6zc8sQLuL8hjHjJULZp8bw==}
+  /yaml/2.1.3:
+    resolution: {integrity: sha512-AacA8nRULjKMX2DvWvOAdBZMOfQlypSFkjcOcu9FalllIDJ1kvlREzcdIZmidQUqqeMv7jorHjq2HlLv/+c2lg==}
     engines: {node: '>= 14'}
     dev: true
