@@ -8,15 +8,20 @@
     "build": "tsc",
     "clean": "rimraf dist",
     "dev": "tsc --watch",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "solution": "tsx scripts/createSolution.ts"
   },
   "devDependencies": {
-    "@ntnyq/prettier-config": "^1.0.5",
+    "@ntnyq/prettier-config": "^1.0.6",
     "@type-challenges/utils": "^0.1.1",
+    "@types/prompts": "^2.4.1",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "picocolors": "^1.0.0",
     "prettier": "^2.7.1",
+    "prompts": "^2.4.2",
     "rimraf": "^3.0.2",
+    "tsx": "^3.10.3",
     "typescript": "^4.8.4"
   },
   "lint-staged": {
