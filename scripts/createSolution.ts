@@ -60,14 +60,13 @@ async function init() {
   if (fs.existsSync(path.resolve(solutionDir, fileName))) {
     console.log(c.red('✖') + ' , File already exist')
   } else {
-    const content = `
-/**
+    const content = `/**
  * @link https://github.com/type-challenges/type-challenges/blob/main/questions/${fileName.slice(
    0,
    -3,
  )}/README.md
  */
-    `
+`
     fs.writeFileSync(path.resolve(solutionDir, fileName), content)
     console.log(c.green(`File create successfully!`))
   }
