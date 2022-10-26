@@ -2,6 +2,7 @@
   "editor.formatOnSave": true,
   "eslint.enable": false,
   "cSpell.words": [
-    "pnpm"
+    "pnpm",
+    "vitepress"
   ]
 }
