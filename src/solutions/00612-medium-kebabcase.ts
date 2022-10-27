@@ -4,43 +4,49 @@
 
 import type { Equal, Expect } from '@type-challenges/utils'
 
-type UpChar =
-  | `A`
-  | `B`
-  | `C`
-  | `D`
-  | `E`
-  | `F`
-  | `G`
-  | `H`
-  | `I`
-  | `J`
-  | `K`
-  | `L`
-  | `M`
-  | `N`
-  | `O`
-  | `P`
-  | `Q`
-  | `R`
-  | `S`
-  | `T`
-  | `U`
-  | `V`
-  | `W`
-  | `X`
-  | `Y`
-  | `Z`
+// type UpChar =
+//   | `A`
+//   | `B`
+//   | `C`
+//   | `D`
+//   | `E`
+//   | `F`
+//   | `G`
+//   | `H`
+//   | `I`
+//   | `J`
+//   | `K`
+//   | `L`
+//   | `M`
+//   | `N`
+//   | `O`
+//   | `P`
+//   | `Q`
+//   | `R`
+//   | `S`
+//   | `T`
+//   | `U`
+//   | `V`
+//   | `W`
+//   | `X`
+//   | `Y`
+//   | `Z`
 
-type KebabCase<
-  S extends string,
-  isFirst extends boolean = true,
-> = S extends `${infer First}${infer Rest}`
-  ? First extends UpChar
-    ? isFirst extends true
-      ? `${Lowercase<First>}${KebabCase<Rest, false>}`
-      : `-${Lowercase<First>}${KebabCase<Rest, false>}`
-    : `${First}${KebabCase<Rest, false>}`
+// type KebabCase<
+//   S extends string,
+//   isFirst extends boolean = true,
+// > = S extends `${infer First}${infer Rest}`
+//   ? First extends UpChar
+//     ? isFirst extends true
+//       ? `${Lowercase<First>}${KebabCase<Rest, false>}`
+//       : `-${Lowercase<First>}${KebabCase<Rest, false>}`
+//     : `${First}${KebabCase<Rest, false>}`
+//   : S
+
+type KebabCase<S extends string> = S extends `${infer First}${infer Rest}`
+  ? Rest extends Uncapitalize<Rest>
+    ? `${Uncapitalize<First>}${KebabCase<Rest>}`
+    : `${Uncapitalize<First>}-${KebabCase<Uncapitalize<Rest>>}`
   : S
 
 export type cases = [

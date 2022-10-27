@@ -25,7 +25,7 @@ async function init() {
           choices: [
             { title: `Easy`, value: `easy` },
             { title: `Medium`, value: `medium` },
-            { title: `Hard`, value: `Hard` },
+            { title: `Hard`, value: `hard` },
             { title: `Extreme`, value: `extreme` },
           ],
         },

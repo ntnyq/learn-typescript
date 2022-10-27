@@ -3,6 +3,7 @@
   "eslint.enable": false,
   "cSpell.words": [
     "pnpm",
+    "uncapitalize",
     "vitepress"
   ]
 }
