@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@ntnyq/prettier-config': ^1.0.6
+  '@ntnyq/prettier-config': ^1.0.7
   '@type-challenges/utils': ^0.1.1
   '@types/prompts': ^2.4.1
   husky: ^8.0.1
@@ -15,7 +15,7 @@ specifiers:
   vitepress: 1.0.0-alpha.26
 
 devDependencies:
-  '@ntnyq/prettier-config': 1.0.6
+  '@ntnyq/prettier-config': 1.0.7
   '@type-challenges/utils': 0.1.1
   '@types/prompts': 2.4.1
   husky: 8.0.1
@@ -41,9 +41,6 @@ packages:
     peerDependencies:
       '@algolia/client-search': '>= 4.9.1 < 6'
       algoliasearch: '>= 4.9.1 < 6'
-    peerDependenciesMeta:
-      '@algolia/client-search':
-        optional: true
     dependencies:
       '@algolia/autocomplete-shared': 1.7.2
       algoliasearch: 4.14.2
@@ -247,8 +244,8 @@ packages:
     dev: true
     optional: true
 
-  /@ntnyq/prettier-config/1.0.6:
-    resolution: {integrity: sha512-PTs9Sv3NjLZVbFOxjc1h1TXtvvch9kjfwCRrvzEl+FEdikbXuDRU14Ue8k/5eWP578xB4G0ISN+tdgrN0du8IA==}
+  /@ntnyq/prettier-config/1.0.7:
+    resolution: {integrity: sha512-Vc66cilF0jh89vZ6ZhsBBBiURmLP+wk7LincczrnSd/U179HkNIHDO7aD7wWLVoXry2yEeZasmBW2dd02KOT6g==}
     dev: true
 
   /@type-challenges/utils/0.1.1:
