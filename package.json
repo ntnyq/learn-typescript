@@ -2,7 +2,7 @@
   "name": "learn-typescript",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@7.14.1",
+  "packageManager": "pnpm@7.16.0",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
@@ -12,19 +12,20 @@
     "typecheck": "tsc --noEmit",
     "solution": "tsx scripts/createSolution.ts"
   },
+  "prettier": "@ntnyq/prettier-config",
   "devDependencies": {
-    "@ntnyq/prettier-config": "^1.0.7",
+    "@ntnyq/prettier-config": "^1.0.9",
     "@type-challenges/utils": "^0.1.1",
     "@types/prompts": "^2.4.1",
-    "husky": "^8.0.1",
+    "husky": "^8.0.2",
     "lint-staged": "^13.0.3",
     "picocolors": "^1.0.0",
     "prettier": "^2.7.1",
     "prompts": "^2.4.2",
     "rimraf": "^3.0.2",
-    "tsx": "^3.11.0",
-    "typescript": "^4.8.4",
-    "vitepress": "1.0.0-alpha.26"
+    "tsx": "^3.12.1",
+    "typescript": "^4.9.3",
+    "vitepress": "1.0.0-alpha.29"
   },
   "lint-staged": {
     "*.{js,ts,json,md,yml}": "prettier --write"
