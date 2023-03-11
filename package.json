@@ -2,7 +2,7 @@
   "name": "learn-typescript",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@7.17.0",
+  "packageManager": "pnpm@7.29.1",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
@@ -11,22 +11,24 @@
     "dev:docs": "vitepress dev docs",
     "typecheck": "tsc --noEmit",
     "prepare": "husky install",
-    "solution": "tsx scripts/createSolution.ts"
+    "solution": "tsx scripts/createSolution.ts",
+    "play": "pnpm -C play run dev"
   },
   "prettier": "@ntnyq/prettier-config",
   "devDependencies": {
-    "@ntnyq/prettier-config": "^1.1.0",
+    "@ntnyq/prettier-config": "^1.4.2",
     "@type-challenges/utils": "^0.1.1",
-    "@types/prompts": "^2.4.1",
-    "husky": "^8.0.2",
+    "@types/prompts": "^2.4.2",
+    "husky": "^8.0.3",
     "nano-staged": "^0.8.0",
     "picocolors": "^1.0.0",
-    "prettier": "^2.8.0",
+    "prettier": "^2.8.4",
     "prompts": "^2.4.2",
-    "rimraf": "^3.0.2",
-    "tsx": "^3.12.1",
-    "typescript": "^4.9.3",
-    "vitepress": "1.0.0-alpha.29"
+    "rimraf": "^4.4.0",
+    "tsx": "^3.12.3",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.4",
+    "vitepress": "1.0.0-alpha.51"
   },
   "nano-staged": {
     "*.{js,ts,json,md,yaml,yml}": "prettier --write"
