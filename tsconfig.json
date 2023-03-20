@@ -1,25 +1,18 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["DOM", "ESNext"],
     "skipLibCheck": true,
     "esModuleInterop": true,
     "strict": true,
     "declaration": true,
     "removeComments": false,
     "strictBindCallApply": true,
-    "lib": [
-      "DOM",
-      "ESNext"
-    ],
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "outDir": "./dist"
+    "moduleResolution": "node"
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "dist",
-    "node_modules"
-  ]
+  "include": ["./src/**/*.ts"],
+  "exclude": ["**/dist", "node_modules"]
 }

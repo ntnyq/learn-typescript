@@ -1,3 +1,5 @@
+import { it, expect } from 'vitest'
+
 import type {
   Alike,
   Equal,
@@ -9,8 +11,6 @@ import type {
   IsTrue,
   IsFalse,
 } from './_utils'
-
-type res = IsTrue<any>
 
 export type cases = [
   Expect<true>,
@@ -41,3 +41,7 @@ export type cases = [
   Expect<Alike<{ a: 1 } & { b: 2 }, { a: 1; b: 2 }>>,
   ExpectFalse<Equal<{ a: 1 } & { b: 2 }, { a: 1; b: 2 }>>,
 ]
+
+it('skip', () => {
+  expect(true).toBe(true)
+})

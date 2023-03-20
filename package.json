@@ -2,7 +2,7 @@
   "name": "learn-typescript",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@7.29.1",
+  "packageManager": "pnpm@7.30.0",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
@@ -12,23 +12,25 @@
     "typecheck": "tsc --noEmit",
     "prepare": "husky install",
     "solution": "tsx scripts/createSolution.ts",
-    "play": "pnpm -C play run dev"
+    "play": "pnpm -C play run dev",
+    "test": "vitest"
   },
   "prettier": "@ntnyq/prettier-config",
   "devDependencies": {
-    "@ntnyq/prettier-config": "^1.4.2",
+    "@ntnyq/prettier-config": "^1.6.0",
     "@type-challenges/utils": "^0.1.1",
-    "@types/prompts": "^2.4.2",
+    "@types/prompts": "^2.4.3",
     "husky": "^8.0.3",
     "nano-staged": "^0.8.0",
     "picocolors": "^1.0.0",
     "prettier": "^2.8.4",
     "prompts": "^2.4.2",
     "rimraf": "^4.4.0",
-    "tsx": "^3.12.3",
-    "typescript": "^4.9.5",
-    "vite": "^4.1.4",
-    "vitepress": "1.0.0-alpha.51"
+    "tsx": "^3.12.5",
+    "typescript": "^5.0.2",
+    "vite": "^4.2.0",
+    "vitepress": "1.0.0-alpha.60",
+    "vitest": "^0.29.3"
   },
   "nano-staged": {
     "*.{js,ts,json,md,yaml,yml}": "prettier --write"

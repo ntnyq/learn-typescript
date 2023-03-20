@@ -1,9 +1,5 @@
 {
   "editor.formatOnSave": true,
   "eslint.enable": false,
-  "cSpell.words": [
-    "pnpm",
-    "uncapitalize",
-    "vitepress"
-  ]
+  "cSpell.words": ["Iife", "pnpm", "uncapitalize", "vitepress"]
 }
