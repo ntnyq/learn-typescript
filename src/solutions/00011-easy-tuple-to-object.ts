@@ -2,7 +2,7 @@
  * @link https://github.com/type-challenges/type-challenges/blob/main/questions/00011-easy-tuple-to-object/README.md
  */
 
-import type { Expect, Equal } from '@type-challenges/utils'
+import type { Equal, Expect } from '@type-challenges/utils'
 
 const tuple = ['tesla', 'model 3', 'model X', 'model Y'] as const
 const tupleNumber = [1, 2, 3, 4] as const

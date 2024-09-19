@@ -3,7 +3,6 @@
  */
 
 import type { Equal, Expect } from '@type-challenges/utils'
-import type { CreateArray } from './_utils'
 
 // type GetLastIndex<T extends unknown[], U, Counter extends unknown[] = []> = T extends [
 //   ...infer Rest,

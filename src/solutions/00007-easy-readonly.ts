@@ -2,7 +2,7 @@
  * @link https://github.com/type-challenges/type-challenges/blob/main/questions/00007-easy-readonly/README.md
  */
 
-import type { Expect, Equal } from '@type-challenges/utils'
+import type { Equal, Expect } from '@type-challenges/utils'
 
 interface Todo1 {
   title: string

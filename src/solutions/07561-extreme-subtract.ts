@@ -3,14 +3,10 @@
  */
 
 import type { Equal, Expect } from '@type-challenges/utils'
-import { CreateArray } from './_utils'
+import type { CreateArray } from './_utils'
 
-type Subtract<M extends number, S extends number> = CreateArray<M> extends [
-  ...arr1: CreateArray<S>,
-  ...arr2: infer Rest,
-]
-  ? Rest[`length`]
-  : never
+type Subtract<M extends number, S extends number> =
+  CreateArray<M> extends [...arr1: CreateArray<S>, ...arr2: infer Rest] ? Rest[`length`] : never
 
 export type cases = [
   Expect<Equal<Subtract<1, 1>, 0>>,

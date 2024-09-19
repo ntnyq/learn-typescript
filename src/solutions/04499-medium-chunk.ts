@@ -26,8 +26,8 @@ type Chunk<T extends unknown[], N extends number, Result extends unknown[] = []>
     ? [Result, ...Chunk<T, N>]
     : Chunk<Rest, N, [...Result, First]>
   : Result extends []
-  ? Result
-  : [Result]
+    ? Result
+    : [Result]
 
 export type cases = [
   Expect<Equal<Chunk<[], 1>, []>>,

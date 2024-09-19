@@ -16,8 +16,8 @@ type Fill<
     ? Fill<R, N, Start, End, [...Result, N], [...Result, N]['length'] extends End ? false : true>
     : Result
   : T extends [infer F, ...infer R]
-  ? Fill<R, N, Start, End, [...Result, F]>
-  : Result
+    ? Fill<R, N, Start, End, [...Result, F]>
+    : Result
 
 export type cases = [
   Expect<Equal<Fill<[], 0>, []>>,

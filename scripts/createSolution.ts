@@ -1,9 +1,10 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import prompts from 'prompts'
+import process from 'node:process'
 import c from 'picocolors'
+import prompts from 'prompts'
 
-const slugify = (name: string) => name.toLowerCase().replace(/\s+?/g, `-`)
+const slugify = (name: string) => name.toLowerCase().replace(/\s/g, `-`)
 
 async function init() {
   const cwd = process.cwd()
@@ -17,48 +18,48 @@ async function init() {
     result = await prompts(
       [
         {
-          name: `level`,
-          type: `select`,
-          message: `Select the challenge level:`,
+          name: 'level',
+          type: 'select',
+          message: 'Select the challenge level:',
           initial: 0,
-          active: `medium`,
+          active: 'medium',
           choices: [
-            { title: `Easy`, value: `easy` },
-            { title: `Medium`, value: `medium` },
-            { title: `Hard`, value: `hard` },
-            { title: `Extreme`, value: `extreme` },
+            { title: 'Easy', value: 'easy' },
+            { title: 'Medium', value: 'medium' },
+            { title: 'Hard', value: 'hard' },
+            { title: 'Extreme', value: 'extreme' },
           ],
         },
         {
-          name: `index`,
-          type: `text`,
-          message: `Input the challenge index:`,
-          initial: ``,
+          name: 'index',
+          type: 'text',
+          message: 'Input the challenge index:',
+          initial: '',
         },
         {
-          name: `title`,
-          type: `text`,
-          message: `Input the challenge title:`,
-          initial: ``,
+          name: 'title',
+          type: 'text',
+          message: 'Input the challenge title:',
+          initial: '',
         },
       ],
       {
         onCancel: () => {
-          throw new Error(c.red('✖') + ' Operation cancelled')
+          throw new Error(`${c.red('✖')} Operation cancelled`)
         },
       },
     )
-  } catch (cancelled) {
-    console.log(cancelled.message)
+  } catch (err) {
+    console.log(err.message)
     process.exit(1)
   }
 
-  const { level, index, title = `hello world` } = result
-  const solutionDir = path.join(cwd, `src/solutions`)
-  const fileName = `${index?.padStart(5, `0`)}-${level}-${slugify(title)}.ts`
+  const { level, index, title = 'hello world' } = result
+  const solutionDir = path.join(cwd, 'src/solutions')
+  const fileName = `${index?.padStart(5, '0')}-${level}-${slugify(title)}.ts`
 
   if (fs.existsSync(path.resolve(solutionDir, fileName))) {
-    console.log(c.red('✖') + ' , File already exist')
+    console.log(`${c.red('✖')} , File already exist`)
   } else {
     const content = `/**
  * @link https://github.com/type-challenges/type-challenges/blob/main/questions/${fileName.slice(
@@ -68,7 +69,7 @@ async function init() {
  */
 `
     fs.writeFileSync(path.resolve(solutionDir, fileName), content)
-    console.log(c.green(`File create successfully!`))
+    console.log(c.green('File create successfully!'))
   }
 }
 

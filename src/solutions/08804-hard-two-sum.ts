@@ -5,12 +5,10 @@
 import type { Equal, Expect } from '@type-challenges/utils'
 import type { CreateArray } from './_utils'
 
-type Subtract<Num1 extends number, Num2 extends number> = CreateArray<Num1> extends [
-  ...arr1: CreateArray<Num2>,
-  ...arr2: infer Rest,
-]
-  ? Rest[`length`]
-  : never
+type Subtract<Num1 extends number, Num2 extends number> =
+  CreateArray<Num1> extends [...arr1: CreateArray<Num2>, ...arr2: infer Rest]
+    ? Rest[`length`]
+    : never
 
 type IsInclude<Arr extends unknown[], Ele> = Arr extends [infer F, ...infer R]
   ? Equal<Ele, F> extends true
@@ -22,8 +20,8 @@ type TwoSum<T extends number[], U extends number> = T extends [infer F extends n
   ? IsInclude<R, Subtract<U, F>> extends true
     ? true
     : R extends number[]
-    ? TwoSum<R, U>
-    : false
+      ? TwoSum<R, U>
+      : false
   : false
 
 export type cases = [

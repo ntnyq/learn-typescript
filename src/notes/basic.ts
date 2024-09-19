@@ -31,7 +31,7 @@ enum GENDER {
 // Any 可执行所有操作 可被赋值所有类型 除了 never
 const any: any = `hello world`
 
-export const num1 = (<string>any).length
+export const num1 = (any as string).length
 export const num2 = (any as string).length
 
 function getFile(file: `${string}.jpg`) {
@@ -69,29 +69,30 @@ function myFunc(numGenerator?: NumberGenerator): number {
   return numGenerator?.() || 0
 }
 
-export function getPropValue<T extends Object, Key extends keyof T>(obj: T, key: Key): T[Key] {
+export function getPropValue<T extends object, Key extends keyof T>(obj: T, key: Key): T[Key] {
   return obj[key]
 }
 
 helloWorld(`hello world`)
 
+// @ts-expect-error
 helloWorld2(`hello world`)
 
 export {
-  name,
   age,
-  isMale,
-  symbol,
   animals,
-  grades,
+  any,
+  config,
   Direction,
   GENDER,
-  any,
-  unknown,
-  config,
-  unusable,
-  n,
-  u,
   getFile,
+  grades,
+  isMale,
   myFunc,
+  n,
+  name,
+  symbol,
+  u,
+  unknown,
+  unusable,
 }

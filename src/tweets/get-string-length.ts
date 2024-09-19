@@ -2,8 +2,8 @@
  * Code snippets from https://twitter.com/trunarla/status/1633867853727408128
  */
 
-export function getStringLengthByObjectKeys(input: string) {
-  return Object.keys({ ...(input as Object) }).reduce(len => len + 1, 0)
+export function getStringLengthByObjectKeys(input: string | object) {
+  return Object.keys({ ...(input as object) }).reduce(len => len + 1, 0)
 }
 
 export function getStringLengthByArrayPop(input: string) {
@@ -11,6 +11,7 @@ export function getStringLengthByArrayPop(input: string) {
 }
 
 export function getStringLengthByEval(input: string) {
+  // eslint-disable-next-line no-eval
   return eval(input.replace(/./g, '1+') + 0)
 }
 
@@ -29,14 +30,14 @@ export function getStringLengthByRecursive(input: string): number {
   if (input === '') {
     return 0
   } else {
-    return 1 + getStringLengthByRecursive(input.substring(1))
+    return 1 + getStringLengthByRecursive(input.slice(1))
   }
 }
 
 export function getStringLengthByIife(input: string) {
   return (count => {
     for (const c of input[Symbol.iterator]()) {
-      count += c.codePointAt(0)! > (1 << 16) - 1 ? 1 << 1 : 1 << 0
+      count += c.codePointAt(0)! > (1 << 16) - 1 ? 1 << 1 : Math.trunc(1)
     }
     return count
   })(0)
@@ -77,6 +78,7 @@ export async function getStringLengthByAsyncFn(input: string) {
     const end = start + chunkSize
     const chunk = input.slice(start, end)
     promises.push(
+      // eslint-disable-next-line no-async-promise-executor
       new Promise(async resolve => {
         let count = 0
         for await (const _ of chunk) {

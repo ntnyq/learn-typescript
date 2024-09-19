@@ -10,11 +10,8 @@ export type IsAnyResult = IsAny<any>
 
 export type IsEqual<A, B> = (A extends B ? true : false) & (B extends A ? true : false)
 export type IsEqualResult = IsEqual<1, any>
-export type IsEqualStrict<A, B> = (<T>() => T extends A ? 1 : 2) extends <T>() => T extends B
-  ? 1
-  : 2
-  ? true
-  : false
+export type IsEqualStrict<A, B> =
+  (<T>() => T extends A ? 1 : 2) extends <T>() => T extends B ? 1 : 2 ? true : false
 export type IsEqualStrictResult = IsEqualStrict<2, any>
 
 export type IsUnion<A, B = A> = A extends A ? ([B] extends [A] ? false : true) : never
@@ -24,9 +21,8 @@ export type IsNever<T> = T extends number ? 1 : 2
 export type IsNeverStrict<T> = [T] extends [number] ? true : false
 
 // 特性 3: 元组 的 length 为字符串 数据 number
-export type NotEqual<A, B> = (<T>() => T extends A ? 1 : 2) extends <T>() => T extends B ? 1 : 2
-  ? false
-  : true
+export type NotEqual<A, B> =
+  (<T>() => T extends A ? 1 : 2) extends <T>() => T extends B ? 1 : 2 ? false : true
 export type IsUnion2<T> = T extends readonly [...prams: infer Elements]
   ? NotEqual<Elements[`length`], number>
   : false
@@ -58,6 +54,7 @@ export type GetOptionalResult = GetOptional<{
   gender: `male` | undefined
 }>
 
+// eslint-disable-next-line no-use-before-define
 export type IsRequired<Key extends keyof Obj, Obj> = {} extends Pick<Obj, Key> ? never : Key
 export type GetRequired<Obj extends Record<string, any>> = {
   [Key in keyof Obj as IsRequired<Key, Obj>]: Obj[Key]

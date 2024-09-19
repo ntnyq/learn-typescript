@@ -6,7 +6,6 @@ export default defineConfig({
   vite: {
     server: {
       open: true,
-      host: true,
     },
   },
 })

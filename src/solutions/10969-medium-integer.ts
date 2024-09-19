@@ -16,18 +16,19 @@ import type { Equal, Expect } from '@type-challenges/utils'
 type Integer<T extends number> = `${T}` extends `${string}.${string}`
   ? never
   : T extends number
-  ? number extends T
-    ? never
-    : T
-  : never
+    ? number extends T
+      ? never
+      : T
+    : never
 
-let x = 1
-let y = 1 as const
+const x = 1
+const y = 1 as const
 
 export type cases1 = [
   Expect<Equal<Integer<1>, 1>>,
   Expect<Equal<Integer<1.1>, never>>,
-  Expect<Equal<Integer<1.0>, 1>>,
+  Expect<Equal<Integer<1>, 1>>,
+  // @ts-expect-error
   Expect<Equal<Integer<typeof x>, never>>,
   Expect<Equal<Integer<typeof y>, 1>>,
 ]

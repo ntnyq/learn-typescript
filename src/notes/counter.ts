@@ -23,12 +23,8 @@ export type Add<Num1 extends number, Num2 extends number> = [
 
 export type AddResult = Add<5, 10>
 
-export type Subtract<Num1 extends number, Num2 extends number> = BuildArray<Num1> extends [
-  ...arr1: BuildArray<Num2>,
-  ...arr2: infer Rest,
-]
-  ? Rest[`length`]
-  : never
+export type Subtract<Num1 extends number, Num2 extends number> =
+  BuildArray<Num1> extends [...arr1: BuildArray<Num2>, ...arr2: infer Rest] ? Rest[`length`] : never
 
 export type SubtractResult = Subtract<32, 14>
 
@@ -65,10 +61,10 @@ export type GreaterThan<
 > = Num1 extends Num2
   ? false
   : Counter[`length`] extends Num2
-  ? true
-  : Counter[`length`] extends Num1
-  ? false
-  : GreaterThan<Num1, Num2, [...Counter, unknown]>
+    ? true
+    : Counter[`length`] extends Num1
+      ? false
+      : GreaterThan<Num1, Num2, [...Counter, unknown]>
 
 export type GreaterThanResult = GreaterThan<888, 2>
 

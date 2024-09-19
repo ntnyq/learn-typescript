@@ -1,7 +1,7 @@
 // 函数重载
 // 1. 使用 declare
-declare function func1(val: string): string
-declare function func1(val: number): number
+export declare function func1(val: string): string
+export declare function func1(val: number): number
 
 // 2. 使用 interface
 interface GetValue2 {

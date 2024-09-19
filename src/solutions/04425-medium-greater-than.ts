@@ -8,10 +8,10 @@ import type { Equal, Expect } from '@type-challenges/utils'
 type GreaterThan<T extends number, U extends number, Counter extends unknown[] = []> = T extends U
   ? false
   : Counter[`length`] extends U
-  ? true
-  : Counter[`length`] extends T
-  ? false
-  : GreaterThan<T, U, [...Counter, unknown]>
+    ? true
+    : Counter[`length`] extends T
+      ? false
+      : GreaterThan<T, U, [...Counter, unknown]>
 
 export type cases = [
   Expect<Equal<GreaterThan<1, 0>, true>>,

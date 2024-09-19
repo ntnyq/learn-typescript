@@ -23,6 +23,7 @@ export class LRUCache<K = string, V = any> {
   set(key: K, value: V) {
     if (this.#cache.size >= this.#maxSize) {
       const oldestKey = this.#cache.keys().next().value
+      if (!oldestKey) return
       this.#cache.delete(oldestKey)
     }
     this.#cache.set(key, value)

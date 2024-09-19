@@ -3,7 +3,6 @@
  */
 
 import type { Equal, Expect } from '@type-challenges/utils'
-import { CreateArray } from './_utils'
 
 // Loop times
 // type Add<Num1 extends number, Num2 extends number> = [

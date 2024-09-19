@@ -2,7 +2,7 @@
  * @link https://github.com/type-challenges/type-challenges/blob/main/questions/00013-warm-hello-world/README.md
  */
 
-import type { Expect, Equal, NotAny } from '@type-challenges/utils'
+import type { Equal, Expect, NotAny } from '@type-challenges/utils'
 
 type HelloWorld = string
 

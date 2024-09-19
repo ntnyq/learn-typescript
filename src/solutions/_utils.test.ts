@@ -1,15 +1,15 @@
-import { it, expect } from 'vitest'
+import { expect, it } from 'vitest'
 
 import type {
   Alike,
   Equal,
-  NotEqual,
   Expect,
-  ExpectTrue,
   ExpectFalse,
+  ExpectTrue,
   IsAny,
-  IsTrue,
   IsFalse,
+  IsTrue,
+  NotEqual,
 } from './_utils'
 
 export type cases = [

@@ -1,5 +1,5 @@
-import { hijackViaProxy, hijackViaDefineProperty } from './hijack'
+import { hijackViaDefineProperty, hijackViaProxy } from './hijack'
 
 hijackViaDefineProperty()
 
-// hijackViaProxy()
+hijackViaProxy()

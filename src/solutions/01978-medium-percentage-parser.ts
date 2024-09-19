@@ -23,12 +23,12 @@ import type { Equal, Expect } from '@type-challenges/utils'
 type PercentageParser<T extends string> = T extends `${infer S extends `+` | `-`}${infer N}%`
   ? [S, N, `%`]
   : T extends `${infer S extends `+` | `-`}${infer N}`
-  ? [S, N, ``]
-  : T extends `${infer N}%`
-  ? [``, N, `%`]
-  : T extends `${infer N}`
-  ? ['', N, '']
-  : never
+    ? [S, N, ``]
+    : T extends `${infer N}%`
+      ? [``, N, `%`]
+      : T extends `${infer N}`
+        ? ['', N, '']
+        : never
 
 type Case0 = ['', '', '']
 type Case1 = ['+', '', '']

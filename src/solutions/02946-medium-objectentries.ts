@@ -4,7 +4,7 @@
 
 import type { Equal, Expect } from '@type-challenges/utils'
 
-type ObjectEntries<T extends Object, R = Required<T>, K = keyof R> = K extends keyof R
+type ObjectEntries<T extends object, R = Required<T>, K = keyof R> = K extends keyof R
   ? [K, R[K] extends undefined ? undefined : R[K]]
   : never
 

@@ -17,8 +17,8 @@ import type { Equal, Expect } from '@type-challenges/utils'
 type Replace<S extends string, From extends string, To extends string> = From extends ''
   ? S
   : S extends `${infer Prefix}${From}${infer Suffix}`
-  ? `${Prefix}${To}${Suffix}`
-  : S
+    ? `${Prefix}${To}${Suffix}`
+    : S
 
 export type cases = [
   Expect<Equal<Replace<'foobar', 'bar', 'foo'>, 'foofoo'>>,

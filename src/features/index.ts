@@ -1,6 +1,6 @@
-const Online = `oneline`
-const Offline = `offline`
+export const Online = 'online'
+export const Offline = 'offline'
 
-type Status = typeof Online | typeof Offline
+export type Status = typeof Online | typeof Offline
 
-const Status2 = typeof Offline
+export const Status2 = typeof Offline

@@ -24,13 +24,13 @@ export type LastResult = LastOfArray<Arr>
 export type PopArr<Arr extends unknown[]> = Arr extends []
   ? []
   : Arr extends [...infer Rest, unknown]
-  ? Rest
-  : never
+    ? Rest
+    : never
 export type ShiftArr<Arr extends unknown[]> = Arr extends []
   ? []
   : Arr extends [unknown, ...infer Rest]
-  ? Rest
-  : never
+    ? Rest
+    : never
 export type EmptyArr = PopArr<[]>
 export type PopArrResult = PopArr<Arr>
 export type ShiftArrResult = ShiftArr<Arr>
@@ -65,6 +65,7 @@ export type TrimLeftResult = TrimLeft<`       hello`>
 export type TrimResult = Trim<`     hello      `>
 
 // 函数 提取参数类型
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export type GetParameters<Func extends Function> = Func extends (...args: infer Args) => unknown
   ? Args
   : never
@@ -72,6 +73,7 @@ export type GetParameters<Func extends Function> = Func extends (...args: infer 
 export type GetParametersResult = GetParameters<(name: string, age: number) => string>
 
 // 不能使用 unknown 涉及参数的逆变性质
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export type GetReturnType<Func extends Function> = Func extends (...args: any[]) => infer ReturnType
   ? ReturnType
   : never
@@ -94,7 +96,7 @@ export class Animal {
 export type GetThisParameterType<T> = T extends (this: infer ThisType, ...args: any[]) => any
   ? ThisType
   : unknown
-const dog = new Animal(`dog`)
+export const dog = new Animal(`dog`)
 export type GetThisParameterTypeResult = GetThisParameterType<typeof dog.greet>
 
 // 构造器

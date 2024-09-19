@@ -7,10 +7,10 @@ import type { Equal, Expect } from '@type-challenges/utils'
 type IsUnion<T, U = T> = [T] extends [never]
   ? false
   : T extends U
-  ? [U] extends [T]
-    ? false
-    : true
-  : false
+    ? [U] extends [T]
+      ? false
+      : true
+    : false
 
 export type cases = [
   Expect<Equal<IsUnion<string>, false>>,

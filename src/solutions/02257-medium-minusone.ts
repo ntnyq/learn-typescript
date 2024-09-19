@@ -2,8 +2,8 @@
  * @link https://github.com/type-challenges/type-challenges/blob/main/questions/02257-medium-minusone/README.md
  */
 
-import type { Equal, Expect } from '@type-challenges/utils'
 import { CreateArray } from './_utils'
+import type { Equal, Expect } from '@type-challenges/utils'
 
 // type MinusOne<T extends number> = CreateArray<T> extends [...infer Rest, infer _]
 //   ? Rest[`length`]
@@ -13,8 +13,8 @@ import { CreateArray } from './_utils'
 type MinusOne<T extends number, Arr extends unknown[] = []> = 0 extends 1
   ? never
   : [unknown, ...Arr][`length`] extends T
-  ? Arr[`length`]
-  : MinusOne<T, [unknown, ...Arr]>
+    ? Arr[`length`]
+    : MinusOne<T, [unknown, ...Arr]>
 
 export type cases = [
   Expect<Equal<MinusOne<1>, 0>>,

@@ -13,14 +13,14 @@
  */
 
 export type DeepPromise = Promise<Promise<Promise<Promise<Record<string, any>>>>>
-export type GetPromiseType<P extends Promise<unknown>> = P extends Promise<infer ValueType>
-  ? ValueType extends Promise<unknown>
-    ? GetPromiseType<ValueType>
-    : ValueType
-  : never
-export type GetPromiseTypeSimple<T> = T extends Promise<infer ValueType>
-  ? GetPromiseTypeSimple<ValueType>
-  : T
+export type GetPromiseType<P extends Promise<unknown>> =
+  P extends Promise<infer ValueType>
+    ? ValueType extends Promise<unknown>
+      ? GetPromiseType<ValueType>
+      : ValueType
+    : never
+export type GetPromiseTypeSimple<T> =
+  T extends Promise<infer ValueType> ? GetPromiseTypeSimple<ValueType> : T
 export type DeepPromiseValue = GetPromiseType<DeepPromise>
 export type DeepPromiseSimpleValue = GetPromiseTypeSimple<DeepPromise>
 
@@ -93,7 +93,8 @@ type DeepObj = {
 }
 export type DeepReadonly<T extends Record<string, any>> = {
   readonly [Key in keyof T]: T[Key] extends object
-    ? T[Key] extends Function
+    ? // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
+      T[Key] extends Function
       ? T[Key]
       : DeepReadonly<T[Key]>
     : T[Key]
@@ -102,7 +103,8 @@ export type DeepReadonly<T extends Record<string, any>> = {
 export type DeepReadonlyOptimazed<T extends Record<string, any>> = T extends any
   ? {
       readonly [Key in keyof T]: T[Key] extends object
-        ? T[Key] extends Function
+        ? // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
+          T[Key] extends Function
           ? T[Key]
           : DeepReadonlyOptimazed<T[Key]>
         : T[Key]

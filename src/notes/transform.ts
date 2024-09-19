@@ -63,6 +63,7 @@ export type DropSubString<
 export type DropSubStringResult = DropSubString<`foobarfoo`, `foo`>
 
 // 函数
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export type AppendArgument<Func extends Function, Arg> = Func extends (
   ...args: infer Args
 ) => infer ReturnType

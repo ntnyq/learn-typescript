@@ -2,7 +2,7 @@
  * @link https://github.com/type-challenges/type-challenges/blob/main/questions/03057-easy-push/README.md
  */
 
-import type { Expect, Equal } from '@type-challenges/utils'
+import type { Equal, Expect } from '@type-challenges/utils'
 
 type Push<T extends any[], U> = [...T, U]
 

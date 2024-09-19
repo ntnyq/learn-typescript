@@ -1,14 +1,14 @@
-import { it, expect } from 'vitest'
+import { expect, it } from 'vitest'
 import {
-  getStringLengthByObjectKeys,
   getStringLengthByArrayPop,
-  getStringLengthByEval,
-  getStringLengthByCharCode,
-  getStringLengthByRecursive,
-  getStringLengthByIife,
-  getStringLengthBySet,
-  getStringLengthByCharCodeAt,
   getStringLengthByAsyncFn,
+  getStringLengthByCharCode,
+  getStringLengthByCharCodeAt,
+  getStringLengthByEval,
+  getStringLengthByIife,
+  getStringLengthByObjectKeys,
+  getStringLengthByRecursive,
+  getStringLengthBySet,
 } from './get-string-length'
 
 type ICase = [string, number]

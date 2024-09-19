@@ -28,10 +28,10 @@ type Split<
 > = S extends `${infer F}${Sep}${infer O}`
   ? Split<O, Sep, [...Result, F]>
   : Sep extends ``
-  ? Result
-  : string extends S
-  ? S[]
-  : [...Result, S]
+    ? Result
+    : string extends S
+      ? S[]
+      : [...Result, S]
 
 export type cases = [
   Expect<Equal<Split<'Hi! How are you?', 'z'>, ['Hi! How are you?']>>,
