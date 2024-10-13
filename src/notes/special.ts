@@ -54,7 +54,6 @@ export type GetOptionalResult = GetOptional<{
   gender: `male` | undefined
 }>
 
-// eslint-disable-next-line no-use-before-define
 export type IsRequired<Key extends keyof Obj, Obj> = {} extends Pick<Obj, Key> ? never : Key
 export type GetRequired<Obj extends Record<string, any>> = {
   [Key in keyof Obj as IsRequired<Key, Obj>]: Obj[Key]
