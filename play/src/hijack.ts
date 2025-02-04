@@ -1,44 +1,44 @@
 export function hijackViaDefineProperty() {
   const map: Record<string, any> = {}
-  let initialValue = `foo`
+  let initialValue = 'foo'
 
-  Object.defineProperty(map, `key`, {
+  Object.defineProperty(map, 'key', {
     // enumerable: false, // enum
     // writable: true,
     // configurable: false, // redefinable or deletable
     // value: initialValue,
     get() {
-      console.log(`getter is called`)
+      console.log('getter is called')
       return initialValue
     },
 
     set(v) {
-      console.log(`setter is called`)
+      console.log('setter is called')
       initialValue = v
     },
   })
 
   console.log(map.key)
-  map.key = `bar`
+  map.key = 'bar'
   console.log(map.key)
 }
 
 export function hijackViaProxy() {
   const state = {
     user: {
-      name: `ntnyq`,
+      name: 'ntnyq',
       age: 30,
     },
-    list: [`eat`, `sleep`],
+    list: ['eat', 'sleep'],
   }
 
   const handler1: ProxyHandler<typeof state.user> = {
     get(target, key) {
-      if (target[key] > 25) {
-        console.log(`Your age is greater than 25`)
+      if (target[key as 'age'] > 25) {
+        console.log('Your age is greater than 25')
         return 1
       } else {
-        console.log(`Your age is less than 25`)
+        console.log('Your age is less than 25')
         return 2
       }
     },
@@ -46,7 +46,7 @@ export function hijackViaProxy() {
 
   const handler2: ProxyHandler<typeof state.list> = {
     get(target, key) {
-      return target[key]
+      return target[key as unknown as number]
     },
   }
 

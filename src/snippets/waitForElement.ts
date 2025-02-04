@@ -1,6 +1,5 @@
 /**
- *
- * @param selector
+ * @param selector - selector
  */
 export function waitForElement(selector: string) {
   return new Promise(resolve => {

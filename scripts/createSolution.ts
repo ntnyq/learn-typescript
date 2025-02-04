@@ -50,7 +50,7 @@ async function init() {
       },
     )
   } catch (err) {
-    console.log(err.message)
+    console.log(err)
     process.exit(1)
   }
 

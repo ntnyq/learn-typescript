@@ -1,14 +1,13 @@
 {
   "name": "learn-typescript",
+  "type": "module",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@9.12.1",
+  "packageManager": "pnpm@10.2.0",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "clean": "rimraf dist",
     "dev": "tsc --watch",
-    "dev:docs": "vitepress dev docs",
     "lint": "eslint .",
     "play": "pnpm -C play run dev",
     "prepare": "husky",
@@ -17,24 +16,21 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^3.0.0-beta.20",
-    "@ntnyq/prettier-config": "^1.21.3",
+    "@ntnyq/eslint-config": "^3.12.3",
+    "@ntnyq/prettier-config": "^1.22.1",
     "@type-challenges/utils": "^0.1.1",
     "@types/prompts": "^2.4.9",
-    "eslint": "^9.12.0",
-    "husky": "^9.1.6",
+    "eslint": "^9.19.0",
+    "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
-    "picocolors": "^1.1.0",
-    "prettier": "^3.3.3",
+    "picocolors": "^1.1.1",
+    "prettier": "^3.4.2",
     "prompts": "^2.4.2",
-    "rimraf": "^6.0.1",
-    "tsx": "^4.19.1",
-    "typescript": "^5.6.3",
-    "vite": "^5.4.8",
-    "vitepress": "^1.4.1",
-    "vitest": "^2.1.2"
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11",
+    "vitest": "^3.0.5"
   },
-  "prettier": "@ntnyq/prettier-config",
   "nano-staged": {
     "*.{js,ts,cjs,mjs,json,md,yaml,yml}": "eslint --fix"
   }

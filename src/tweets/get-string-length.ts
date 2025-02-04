@@ -65,6 +65,7 @@ export function getStringLengthBySet(input: string) {
 // }
 
 export function getStringLengthByCharCodeAt(input: string) {
+  // eslint-disable-next-line unicorn/prefer-code-point
   return [...input].map(c => (c.charCodeAt(0) >> 11) + 1).reduce((a, b) => a + b)
 }
 

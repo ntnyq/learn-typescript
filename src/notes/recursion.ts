@@ -9,7 +9,7 @@
  * 2. 字符串长度不确定
  * 3. 对象嵌套层级不确定
  *
- * @warning TS 类型递归层数有限制
+ * TS 类型递归层数有限制
  */
 
 export type DeepPromise = Promise<Promise<Promise<Promise<Record<string, any>>>>>

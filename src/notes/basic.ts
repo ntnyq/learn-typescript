@@ -1,7 +1,7 @@
 // 字面量类型
 
 // String
-const name = `ntnyq`
+const name = 'ntnyq'
 
 // Number
 const age = 28
@@ -10,10 +10,10 @@ const age = 28
 const isMale = true
 
 // Symbol
-const symbol = Symbol(`symbol`)
+const symbol = Symbol('symbol')
 
 // Array
-const animals: string[] = [`cat`, `dog`, `tiger`]
+const animals: string[] = ['cat', 'dog', 'tiger']
 const grades: Array<number> = [95, 25, 30]
 
 // Enum
@@ -24,12 +24,12 @@ enum Direction {
   RIGHT,
 }
 enum GENDER {
-  MALE = `male`,
-  FEMALE = `female`,
+  MALE = 'male',
+  FEMALE = 'female',
 }
 
 // Any 可执行所有操作 可被赋值所有类型 除了 never
-const any: any = `hello world`
+const any: any = 'hello world'
 
 export const num1 = (any as string).length
 export const num2 = (any as string).length
@@ -48,12 +48,12 @@ type Dictionary<T> = Record<string, T>
 
 // Tuple 元祖
 const config: [string, Dictionary<string | number>, string?] = [
-  `error`,
+  'error',
   {
-    ignore: `^foobar`,
+    ignore: '^foobar',
     level: 2,
   },
-  `test`,
+  'test',
 ]
 
 // Void
@@ -73,10 +73,10 @@ export function getPropValue<T extends object, Key extends keyof T>(obj: T, key:
   return obj[key]
 }
 
-helloWorld(`hello world`)
+helloWorld('hello world')
 
-// @ts-expect-error
-helloWorld2(`hello world`)
+// @ts-expect-error type
+helloWorld2('hello world')
 
 export {
   age,
